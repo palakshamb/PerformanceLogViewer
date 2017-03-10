@@ -7,27 +7,23 @@
                         <span class="card-title">Search</span>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="last_name" type="text" class="active" value="{{Model.PresetSearchText}}" />
-                                <label for="last_name">Enter Application name/SituationId/Session name</label>
+                                <input id="SearchText" type="text" class="active" ng-model="Model.SearchText" value="{{Model.SearchText}}" />
+                                <label for="SearchText">Enter Application name/SituationId/Session name</label>
                             </div>
                         </div>
                         <div class="row">
                             <span>
-                                <!--<input type="checkbox" id="Graph" checked="checked"/>
-                                    <label for="Graph" style="color:#333">Graph</label>-->
-                                <input class="with-gap" name="group3" type="radio" id="Graph" checked />
+                                <input class="with-gap" name="dashboardType" type="radio" id="Graph" value="Graph" ng-model="Model.DashboardType" checked />
                                 <label for="Graph" style="color: #333">Graph</label>
                             </span>
                             <span style="padding-left: 50px">
-                                <!--<input type="checkbox" id="Data" />
-                                    <label for="Data" style="color: #333">Data</label>-->
-                                <input class="with-gap" name="group3" type="radio" id="Data" />
+                                <input class="with-gap" name="dashboardType" type="radio" id="Data" value="Data" ng-model="Model.DashboardType"/>
                                 <label for="Data" style="color: #333">Data</label>
                             </span>
                         </div>
                     </div>
                     <div class="card-action">
-                        <a class="waves-effect waves-light btn" href="#">Search</a>
+                        <button class="waves-effect waves-light btn" ng-click="ShowSearchOptions()">Search</button>
                     </div>
                 </div>
             </div>
@@ -37,5 +33,6 @@
 <script>
     $(document).ready(function () {
         Materialize.updateTextFields();
+        $("#SearchText").focus();
     });
 </script>
