@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>PerfLogViewer</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!--Let browser know website is optimized for mobile-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+    <link href="assets/css/site.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+</head>
+<body ng-app="logViewerApp">
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <!-- Dropdown Content -->
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="/features/integrations">Dashboard</a></li>
+            <li><a href="/features/codeblock">Configuration</a></li>
+            <li><a href="/features/user">User API</a></li>
+            <li><a href="/features/object">Data API</a></li>
+            <li><a href="/features/hosting">Hosting</a></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper teal darken-2 site-navbar">
+                <div class="col s12">
+                    <a href="/" class="brand-logo">
+                        <!--<img src="/images/full-logo-no-neck.png" class="logo-img" alt=""></a>-->
+                        <span class="large material-icons" style="color: #fff">insert_chart</span>
+                        <span>Performance Log Viewer</span>
+                    </a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+                    <!-- Navbar menu -->
+                    <ul class="right hide-on-med-and-down">
+                        <li class="link"><a href="/blueprints">Configuration</a></li>
+                    </ul>
+
+                    <!-- Navbar menu mobile -->
+                    <ul class="side-nav" id="mobile-demo">
+                        <li><a href="/blueprints">Configuration</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col s12" ng-view>
+        </div>
+    </div>
+    <script src="app/app.module.js"></script>
+    <script src="app/shared/services/logFileServices.js"></script>
+    <script src="app/components/dashboard/dashboardServices.js"></script>
+    <script src="app/components/dashboard/dashboardController.js"></script>
+    <script src="app/components/search/searchController.js"></script>
+</body>
+</html>
