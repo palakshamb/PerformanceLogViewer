@@ -8,12 +8,6 @@
     <!--Let browser know website is optimized for mobile-->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
     <link href="assets/css/site.css" rel="stylesheet" />
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-
 </head>
 <body ng-app="logViewerApp">
     <!-- Navbar -->
@@ -50,13 +44,24 @@
         </nav>
     </div>
     <div class="row">
+        <!-- Page content view -->
         <div class="col s12" ng-view>
         </div>
     </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    
+    <script src="app/shared/helpers/constants.js"></script>
+    <script src="app/shared/helpers/utilities.js"></script>
     <script src="app/app.module.js"></script>
     <script src="app/shared/services/logFileServices.js"></script>
     <script src="app/components/dashboard/dashboardServices.js"></script>
     <script src="app/components/dashboard/dashboardController.js"></script>
     <script src="app/components/search/searchController.js"></script>
+    <script src="app/components/data/dataController.js"></script>
+    <script src="app/components/data/dataServices.js"></script>
+    <script src="app/components/configuration/configurationController.js"></script>
 </body>
 </html>
